@@ -1,0 +1,32 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    /* justify-content: center; */
+    text-align: center;
+    max-width: 300px;
+    /* border-radius: 5 %; */
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+.Card:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 1px 10px #888888;
+}
+
+.Label {
+    padding: 0;
+    margin: 5px 0px;
+}
+
+.ProductName {
+    text-transform: uppercase;
+    margin: 5px;
+}
+
+.Image {
+    width: 100%;
+    /* object-fit: contain; */
+}

@@ -1,0 +1,32 @@
+.Header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(70, 80, 74, 0.445);
+}
+
+h2 {
+    font-size: larger;
+}
+
+.Header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+}
+
+.Header ul li {
+    padding: 10px 12px;
+    font-size: 16pt;
+    /* font-family: "Syne Mono", monos psace; */
+}
+
+a {
+    text-decoration: none;
+}

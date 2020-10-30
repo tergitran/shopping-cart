@@ -1,0 +1,71 @@
+.Cart {
+    margin: 100px auto;
+    width: 800px;
+    text-align: center;
+}
+
+@media (max-width: 1000px) {
+    .Cart {
+        width: 80%;
+    }
+}
+
+.Item {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.Detail {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    .Item {
+        height: 120px;
+    }
+    .Cart {
+        width: 95%;
+    }
+    .Detail {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .ItemInfor h3 {
+        margin: 0;
+        padding: 0;
+    }
+    .ItemInfor p {
+        margin-bottom: 10px;
+    }
+}
+.Item label {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.Thumbnail {
+    height: 100%;
+}
+
+.QuantityBtn {
+    /* display: block; */
+    width: 3em;
+    margin-left: 5px;
+}
+
+.Summary {
+    text-align: right;
+}
+
+.Functional {
+    margin-top: 5px;
+}
