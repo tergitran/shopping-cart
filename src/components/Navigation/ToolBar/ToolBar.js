@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import styles from './ToolBar.module.css';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Badge } from '@material-ui/core';
@@ -7,20 +7,23 @@ import { Badge } from '@material-ui/core';
 
 const ToolBar = props => {
     const { itemsInCart } = props;
+    const style = {
+        color: 'beige'
+    };
     return (
         <header className={styles.Header}>
             <h2>CASIO</h2>
-            <ul>
+            <ul className={styles.NavigationItems}>
                 <li>
-                    <Link to='/'>Home</Link>
+                    <NavLink activeStyle={style} to='/shopping-cart'>Home</NavLink>
                 </li>
-                <li><Link to='/products'>Shop</Link></li>
+                <li><NavLink activeStyle={style} to='/products'>Shop</NavLink></li>
                 <li>
-                    <Link to='/cart'>
+                    <NavLink activeStyle={style} to='/cart'>
                         <Badge badgeContent={itemsInCart.length} color="primary">
                             <ShoppingCartIcon></ShoppingCartIcon>
                         </Badge>
-                    </Link>
+                    </NavLink>
                 </li>
             </ul>
         </header>

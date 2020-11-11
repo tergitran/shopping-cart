@@ -7,21 +7,24 @@
     display: flex;
     justify-content: space-between;
     background-color: rgba(70, 80, 74, 0.445);
+    padding-left: 10px;
 }
 
 h2 {
     font-size: larger;
 }
 
-.Header ul {
+.NavigationItems {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
     margin-right: 20px;
+    align-items: center;
+    /* justify-content: center; */
 }
 
-.Header ul li {
+.NavigationItems li {
     padding: 10px 12px;
     font-size: 16pt;
     /* font-family: "Syne Mono", monos psace; */
@@ -29,4 +32,9 @@ h2 {
 
 a {
     text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: antiquewhite;
 }

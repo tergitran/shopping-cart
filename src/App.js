@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Cart from './components/Cart/Cart';
+import Home from './components/Home/Home';
 import Layout from './components/Layout/Layout';
 import Products from './components/Products/Products';
 
@@ -9,9 +10,16 @@ import Products from './components/Products/Products';
 function App() {
   const [itemsInCart, setItemsInCart] = useState([]);
 
+  function handleItemRemove(item) {
+    var elementPos = itemsInCart.map(function (x) { return x.name; }).indexOf(item.name);
+    let newItemsInCart = [];
+    newItemsInCart = [...itemsInCart];
+    newItemsInCart.splice(elementPos, 1);
+    setItemsInCart(newItemsInCart);
+  }
+
+
   function handleItemAdd(item) {
-
-
     var elementPos = itemsInCart.map(function (x) { return x.name; }).indexOf(item.name);
 
     let newItemsInCart = [];
@@ -45,8 +53,8 @@ function App() {
     <BrowserRouter>
       <Layout itemsInCart={itemsInCart}>
         <Switch>
-          <Route path='/' exact>
-            <h1>Welcome you to Casio Shop!</h1>
+          <Route path='/shopping-cart' exact>
+            <Home />
           </Route>
           <Route path='/products'>
             <Products onItemClick={handleItemAdd} />
@@ -54,7 +62,8 @@ function App() {
           <Route path='/cart'>
             <Cart
               itemsInCart={itemsInCart}
-              onChangeQuantity={handleQuantityChange} />
+              onChangeQuantity={handleQuantityChange}
+              onRemoveItem={handleItemRemove} />
           </Route>
         </Switch>
       </Layout>

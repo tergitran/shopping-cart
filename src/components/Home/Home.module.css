@@ -1,0 +1,31 @@
+.Home {
+    height: 100vh;
+    margin-top: 50px;
+}
+.Background {
+    text-align: center;
+    background-image: url("../../bg_new.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.5; */
+}
+
+.Background h1 {
+    color: beige;
+    font-size: 50pt;
+    margin: 0;
+    padding-top: 50px;
+    margin-bottom: 100px;
+}
+
+@media (max-width: 500px) {
+    .Background h1 {
+        font-size: 30pt;
+    }
+}
