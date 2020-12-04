@@ -4,10 +4,9 @@
     text-align: center;
 }
 
-@media (max-width: 1000px) {
-    .Cart {
-        width: 80%;
-    }
+.ItemInfor h3{
+    text-transform: uppercase;
+    margin-bottom: 5px;
 }
 
 .Item {
@@ -24,48 +23,50 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     text-align: left;
 }
 
-@media (max-width: 700px) {
-    .Item {
-        height: 120px;
-    }
-    .Cart {
-        width: 95%;
-    }
-    .Detail {
-        display: block;
-        margin-top: 10px;
-    }
-
-    .ItemInfor h3 {
-        margin: 0;
-        padding: 0;
-    }
-    .ItemInfor p {
-        margin-bottom: 10px;
-    }
-}
-.Item label {
-    margin-top: 10px;
-    margin-right: 10px;
-}
 
 .Thumbnail {
     height: 100%;
 }
 
-.QuantityBtn {
-    /* display: block; */
-    width: 3em;
-    margin-left: 5px;
-}
 
 .Summary {
     text-align: right;
 }
 
-.Functional {
-    margin-top: 5px;
+.Summary > * {
+    margin-bottom: 16px;
 }
+
+.Functional {
+    margin-right: 16px;
+}
+
+.Functional input{
+    padding: 3px;
+    width: 4em;
+    margin-left: 5px;
+    font-size: 11pt;
+}
+
+.Functional label {
+    margin-right: 5px;
+}
+
+@media only screen and (max-width: 420px) {
+    .Detail {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+} 
+
+@media only screen and (max-width: 1000px) {
+    .Cart {
+        width: 90%;
+    }
+} 
